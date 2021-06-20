@@ -1,0 +1,12 @@
+/Users/satouyuuki/Practice/c#/practices/bankaccount/bankaccount/bankaccount/bin/Debug/netcoreapp3.1/bankaccount.deps.json
+/Users/satouyuuki/Practice/c#/practices/bankaccount/bankaccount/bankaccount/bin/Debug/netcoreapp3.1/bankaccount.runtimeconfig.json
+/Users/satouyuuki/Practice/c#/practices/bankaccount/bankaccount/bankaccount/bin/Debug/netcoreapp3.1/bankaccount.runtimeconfig.dev.json
+/Users/satouyuuki/Practice/c#/practices/bankaccount/bankaccount/bankaccount/bin/Debug/netcoreapp3.1/bankaccount.dll
+/Users/satouyuuki/Practice/c#/practices/bankaccount/bankaccount/bankaccount/bin/Debug/netcoreapp3.1/bankaccount.pdb
+/Users/satouyuuki/Practice/c#/practices/bankaccount/bankaccount/bankaccount/obj/Debug/netcoreapp3.1/bankaccount.csproj.AssemblyReference.cache
+/Users/satouyuuki/Practice/c#/practices/bankaccount/bankaccount/bankaccount/obj/Debug/netcoreapp3.1/bankaccount.AssemblyInfoInputs.cache
+/Users/satouyuuki/Practice/c#/practices/bankaccount/bankaccount/bankaccount/obj/Debug/netcoreapp3.1/bankaccount.AssemblyInfo.cs
+/Users/satouyuuki/Practice/c#/practices/bankaccount/bankaccount/bankaccount/obj/Debug/netcoreapp3.1/bankaccount.csproj.CoreCompileInputs.cache
+/Users/satouyuuki/Practice/c#/practices/bankaccount/bankaccount/bankaccount/obj/Debug/netcoreapp3.1/bankaccount.dll
+/Users/satouyuuki/Practice/c#/practices/bankaccount/bankaccount/bankaccount/obj/Debug/netcoreapp3.1/bankaccount.pdb
+/Users/satouyuuki/Practice/c#/practices/bankaccount/bankaccount/bankaccount/obj/Debug/netcoreapp3.1/bankaccount.genruntimeconfig.cache
