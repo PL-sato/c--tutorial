@@ -20,14 +20,28 @@ namespace bankaccount
             }
         }
         private static int accountNumberSeed = 1234567890;
+        private readonly decimal minimumBalance;
 
-        public BankAccount(string name, decimal initialBalance)
+        public BankAccount(string name, decimal initialBalance) : this(name, initialBalance, 0)
         {
-            this.Owner = name;
-            //this.Balance = initialBalance;
-            MakeDeposit(initialBalance, DateTime.Now, "Initial balance");
+            
+        }
+
+        public BankAccount(string name, decimal initialBalance, decimal minimumBalance)
+        {
             this.Number = accountNumberSeed.ToString();
             accountNumberSeed++;
+
+            this.Owner = name;
+
+            this.minimumBalance = minimumBalance;
+            if(initialBalance > 0)
+                MakeDeposit(initialBalance, DateTime.Now, "Initial balance");
+
+        }
+
+        public virtual void PeformMonthEndTransactions()
+        {
 
         }
         private List<Transaction> allTransactions = new List<Transaction>();
@@ -47,13 +61,26 @@ namespace bankaccount
             {
                 throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be positive.");
             }
-            if(Balance - amount < 0)
+            var overdraftTransaction = CheckWithdrawalLimit(Balance - amount < minimumBalance);
+
+            var withdrawal = new Transaction(-amount, date, note);
+            allTransactions.Add(withdrawal);
+            if (overdraftTransaction != null)
+                allTransactions.Add(overdraftTransaction);
+        }
+
+        protected virtual Transaction? CheckWithdrawalLimit(bool isOverdrawn)
+        {
+            if(isOverdrawn)
             {
                 throw new InvalidOperationException("Not sufficient funds for this withdrawal");
             }
-            var withdrawal = new Transaction(-amount, date, note);
-            allTransactions.Add(withdrawal);
+            else
+            {
+                return default;
+            }
         }
+
         public string GetAccountHistory()
         {
             var report = new System.Text.StringBuilder();
